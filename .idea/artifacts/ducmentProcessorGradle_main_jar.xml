@@ -2,17 +2,11 @@
   <artifact type="jar" name="ducmentProcessorGradle.main:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/ducmentProcessorGradle_main_jar</output-path>
     <root id="archive" name="ducmentProcessorGradle.main.jar">
-      <element id="module-output" name="ducmentProcessorGradle.main" />
-      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/15.0.1/6ab161d111b173da74d3754fd4017cf17d491d58/javafx-graphics-15.0.1-linux.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/15.0.1/7e951231ff36d704e8cc8b112b71951c9ccbc15d/javafx-controls-15.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-swing/15.0.1/3756a1cbf2755d7e22b5ddaa550cb717ab7e20cf/javafx-swing-15.0.1-linux.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/15.0.1/181dfd960832b85c67764d229c8c6fdba5cd5a35/javafx-base-15.0.1-linux.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/15.0.1/1d2a8b3cff48cb8d83deb8aeb00226776146ebc4/javafx-fxml-15.0.1-linux.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lingala.zip4j/zip4j/2.7.0/cfaa04aab342a807656ecfc513116f8751b33f68/zip4j-2.7.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/15.0.1/55565f47d9d4e295f8bdeb8a6577e29b8bc29267/javafx-graphics-15.0.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/15.0.1/11efce24b8ac1a119ec355fd7302dd1e373eb7dd/javafx-controls-15.0.1-linux.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/15.0.1/88d5d4ad546e17904516fd05be69243e54144af4/javafx-base-15.0.1.jar" path-in-jar="/" />
-      <element id="dir-copy" path="$PROJECT_DIR$/../../openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2" />
+      <element id="dir-copy" path="$PROJECT_DIR$/../../javafxLib/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2" />
     </root>
   </artifact>
 </component>

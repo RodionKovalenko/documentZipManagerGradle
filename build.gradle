@@ -2,10 +2,11 @@ plugins {
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.9'
     id 'org.beryx.jlink' version '2.23.5'
+    id "edu.sc.seis.launch4j" version "2.4.9"
 }
 
 
-mainClassName = "$moduleName/rodionFX.Main"
+mainClassName = "$moduleName/rodionFX.Launcher"
 
 sourceCompatibility = 15
 targetCompatibility = 15
@@ -28,7 +29,7 @@ javafx {
 
 jar {
     manifest {
-        attributes "Main-Class": "$moduleName/rodionFX.Main"
+        attributes "Main-Class": "rodionFX.Launcher"
     }
 
     from {
@@ -37,10 +38,15 @@ jar {
 }
 
 
-
 jlink {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     launcher {
-        name = 'documentZipManager'
+        name = 'hellofx'
     }
+}
+
+launch4j {
+    mainClassName = "rodionFX.Launcher"
+    icon = "${projectDir}/src/main/resources/rodionFX/icons/password-eye.ico"
+    outfile = 'rodionZipManager.exe'
 }

@@ -6,6 +6,6 @@ module rodionFX {
     requires java.datatransfer;
     requires java.desktop;
 
-    opens rodionFX to javafx.graphics, javafx.base, javafx.fxml;
-    opens rodionFX.document_processor to javafx.fxml, javafx.base;
+    opens rodionFX to javafx.graphics, javafx.base, javafx.fxml, javafx.controls;
+    opens rodionFX.document_processor to javafx.graphics, javafx.base, javafx.fxml, javafx.controls;
 }
