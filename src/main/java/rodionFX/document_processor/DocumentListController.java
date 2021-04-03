@@ -79,10 +79,16 @@ public class DocumentListController {
         String osName = System.getProperty("os.name");
         String homeDir = System.getProperty("user.home");
 
-        File defaultDirectory = switch (osName) {
-            case "Linux", "Windows" -> new File(homeDir + "/Desktop");
-            default -> new File("/");
-        };
+        File defaultDirectory;
+        switch (osName) {
+            case "Linux":
+            case "Windows":
+                defaultDirectory = new File(homeDir + "/Desktop");
+                break;
+            default:
+                defaultDirectory = new File("/");
+                break;
+        }
 
         chooser.setTitle("Waehlen Sie einen Ordner aus");
         chooser.setInitialDirectory(defaultDirectory);
