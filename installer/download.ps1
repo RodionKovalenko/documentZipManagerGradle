@@ -39,7 +39,6 @@ if (![System.IO.Directory]::Exists($pathToDirectory))
 
 pause
 
-
 #remove Folder after copying
 
 if (Test-Path -Path $localDataPath\\rodionZipManager -PathType Container) {
@@ -53,17 +52,15 @@ pause
 
 "Checking java version.... Warten Sie bis die Installation abgeschlossen wird"
 
-$javaver = $out = &"java.exe" -version 2>&1
+#$javaver = $out = &"java.exe" -version 2>&1
+#if ($javaver) {
+#    "installed java version $javaver"
+#} else {
+#    "installing java runtime"
+#   Invoke-Expression "& `".\jre-8.exe`""
+#}
 
-
-if ($javaver) {
-    "installed java version $javaver"
-} else {
-    "installing java runtime"
-   Invoke-Expression "& `".\jre-8.exe`""
-}
-
-pause
+#pause
 
 
 "remove installtion packages"
