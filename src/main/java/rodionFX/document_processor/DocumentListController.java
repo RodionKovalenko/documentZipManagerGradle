@@ -1,7 +1,9 @@
 package rodionFX.document_processor;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
@@ -13,6 +15,8 @@ import net.lingala.zip4j.ZipFile;
 import net.lingala.zip4j.exception.ZipException;
 import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.model.enums.EncryptionMethod;
+import rodionFX.Launcher;
+import rodionFX.Main;
 import rodionFX.user.Toast;
 import rodionFX.user.UserPreferences;
 import rodionFX.utils.Serialization.SerializationService;
@@ -29,6 +33,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class DocumentListController {
+    public Button updateBtn;
     @FXML
     private TextField passwordField;
 
@@ -204,5 +209,32 @@ public class DocumentListController {
         }
 
         return true;
+    }
+
+    public void onAppUpdateAction(ActionEvent actionEvent) throws IOException {
+        String currentLocation = System.getProperty("user.dir");
+
+        ProcessBuilder builder = new ProcessBuilder(
+                "cmd.exe", "git pull");
+        builder.redirectErrorStream(true);
+        Process p = builder.start();
+
+        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+        System.out.println("git pull executed");
+        Toast.makeText(this.stage,
+                "Updates werden durchgeführt",
+                true);
+
+        System.out.println( "Restarting app!" );
+
+        this.stage.close();
+        Platform.runLater( () -> {
+            try {
+                new Main().start( new Stage() );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
