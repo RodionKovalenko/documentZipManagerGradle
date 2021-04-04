@@ -1,9 +1,8 @@
-package rodionFX.utils.Serialization;
+package rodionFX.utils.serialization;
 
 import rodionFX.user.UserPreferences;
 
 import java.io.*;
-import java.nio.file.Files;
 
 public class SerializationService {
     public UserPreferences userPreferences = new UserPreferences();
@@ -43,7 +42,7 @@ public class SerializationService {
     }
 
     public void saveUserPreferences() {
-        // Serialization
+        // serialization
         try {
             //Saving of userPreference object in a file
             FileOutputStream file = new FileOutputStream(this.filename);
