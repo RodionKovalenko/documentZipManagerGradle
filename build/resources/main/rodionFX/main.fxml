@@ -19,7 +19,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <GridPane fx:controller="rodionFX.document_processor.DocumentListController"
-          xmlns:fx="http://javafx.com/fxml/1">
+          xmlns:fx="http://javafx.com/fxml/1" stylesheets="@cssfilepath.css">
     <padding>
         <Insets top="55" right="25" bottom="10" left="25"/>
     </padding>
@@ -194,7 +194,7 @@
     </Button>
 
     <!-- Add Update Button -->
-    <Button fx:id="updateBtn" text="Check for Updates"
+    <Button fx:id="updateBtn" text="Check for Updates" styleClass="addBobOk"
             prefWidth="200" prefHeight="40" defaultButton="true"
             minWidth="200"
             GridPane.valignment="BOTTOM" GridPane.halignment="LEFT"
