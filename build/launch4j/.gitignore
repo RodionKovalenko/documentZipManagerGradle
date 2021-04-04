@@ -1,6 +1,6 @@
 *.bat
 download.ps1
-uninst000.exe
+unins000.exe
 LICENSE
 .*png
 README.md
