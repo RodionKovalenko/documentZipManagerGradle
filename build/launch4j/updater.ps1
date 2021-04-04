@@ -3,8 +3,6 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit;
 }
 
-git restore .
-git clean -f -x
 git pull
 
 pause
