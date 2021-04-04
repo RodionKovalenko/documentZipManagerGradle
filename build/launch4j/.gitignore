@@ -1,0 +1,9 @@
+*.bat
+*.ps1
+LICENSE
+.*png
+README.md
+*.txt
+*.vbs
+*.dat
+*.ser
