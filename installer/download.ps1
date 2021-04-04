@@ -3,6 +3,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit;
 }
 
+pause
 
 $z = gl
 
@@ -13,6 +14,8 @@ if (Test-Path -Path $localDataPath\\rodionZipManager -PathType Container) {
     
     "tmp folder removed"
 }
+
+pause
 
 
 Get-ChildItem $z -Filter *.zip | Expand-Archive -DestinationPath $localDataPath\\rodionZipManager\\jdk-15 -Force
@@ -34,6 +37,7 @@ if (![System.IO.Directory]::Exists($pathToDirectory))
     "jdk-15 copied to Program Files/Java"
 }
 
+pause
 
 
 #remove Folder after copying
@@ -45,9 +49,12 @@ if (Test-Path -Path $localDataPath\\rodionZipManager -PathType Container) {
 }
 
 
-$javaver =  Get-WmiObject -Class Win32_Product -Filter "Name like 'Java(TM)%'" | Select -Expand Version
+pause
 
-"Warten Sie bis die Installation abgeschlossen wird"
+"Checking java version.... Warten Sie bis die Installation abgeschlossen wird"
+
+$javaver = $out = &"java.exe" -version 2>&1
+
 
 if ($javaver) {
     "installed java version $javaver"
@@ -55,6 +62,8 @@ if ($javaver) {
     "installing java runtime"
    Invoke-Expression "& `".\jre-8.exe`""
 }
+
+pause
 
 
 "remove installtion packages"
@@ -67,6 +76,6 @@ if (Test-Path -Path $z -PathType Container) {
 }
 
 
-
+pause
 "finished"
 
