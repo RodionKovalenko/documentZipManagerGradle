@@ -49,8 +49,8 @@ jlink {
 launch4j {
     mainClassName = "rodionFX.Launcher"
     icon = "${projectDir}/src/main/resources/rodionFX/icons/password-eye.ico"
-    outfile = 'rodionZipManager.exe'
-    bundledJrePath ="C:\\Program Files\\Java\\jdk-15.0.2"
+    outfile = 'zipManager.exe'
+    bundledJrePath ="C:\\Program Files\\Java\\jdk-15"
 }
 
 
