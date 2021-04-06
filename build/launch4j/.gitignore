@@ -1,6 +1,7 @@
 *.bat
 download.ps1
-unins000.exe
+*.exe
+!zipManager.exe
 LICENSE
 .*png
 README.md
