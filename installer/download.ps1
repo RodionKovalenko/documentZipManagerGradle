@@ -3,7 +3,6 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     exit;
 }
 
-pause
 
 $z = gl
 
@@ -14,8 +13,6 @@ if (Test-Path -Path $localDataPath\\rodionZipManager -PathType Container) {
     
     "tmp folder removed"
 }
-
-pause
 
 
 Get-ChildItem $z -Filter *.zip | Expand-Archive -DestinationPath $localDataPath\\rodionZipManager\\jdk-15 -Force
@@ -37,7 +34,6 @@ if (![System.IO.Directory]::Exists($pathToDirectory))
     "jdk-15 copied to Program Files/Java"
 }
 
-pause
 
 #remove Folder after copying
 
@@ -47,8 +43,6 @@ if (Test-Path -Path $localDataPath\\rodionZipManager -PathType Container) {
     "tmp folder removed"
 }
 
-
-pause
 
 "Checking java version.... Warten Sie bis die Installation abgeschlossen wird"
 
@@ -72,7 +66,5 @@ if (Test-Path -Path $z -PathType Container) {
     "tmp folder removed"
 }
 
-
-pause
 "finished"
 
